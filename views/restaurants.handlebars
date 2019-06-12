@@ -4,3 +4,10 @@
     <li>{{ this }}</li>
   {{/each}}
 </ul>
+
+  <div class="add-restaurant">
+    <form id="myform" action="/restaurants" method="post" enctype="application/x-www-form-urlencoded">
+      <input type="text" name="restaurantName" id="mytext" />
+      <input type="submit">ADD RESTAURANT</input>
+    </form>
+  </div>
