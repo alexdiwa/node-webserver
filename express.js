@@ -24,11 +24,16 @@ app.get("/", (req, res) => {
 });
 
 app.get("/students", (req, res) => {
-  res.send(data.students);
+  res.render("students", {
+    students: data.students,
+    studentCounts: data.counts
+  });
 });
 
 app.get("/restaurants", (req, res) => {
-  res.render("restaurants", { restaurants: restaurants.restaurants });
+  res.render("restaurants", {
+    restaurants: restaurants.restaurants
+  });
 });
 
 app.post("/students", (req, res) => {
