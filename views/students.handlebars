@@ -1,6 +1,23 @@
-<h1>Students</h1>
-<ul>
-  {{#each studentCounts}}
-    <li>{{@key}} has been matched {{this}} times</li>
-  {{/each}}
-</ul>
+<div class="lunch">
+  <h1>Students</h1>
+  <ul>
+    {{#each students}}
+      <li>{{this}}</li>
+    {{/each}}
+  </ul>
+
+  <ul>
+    {{#each studentCounts}}
+      <li>{{@key}} has been matched {{this}} times</li>
+    {{/each}}
+  </ul>
+
+
+
+  <div class="add-student">
+    <form id="myform" action="/students" method="post" enctype="application/x-www-form-urlencoded">
+      <input type="text" name="studentName" id="mytext" />
+      <input type="submit">ADD STUDENT</input>
+    </form>
+  </div>
+</div>

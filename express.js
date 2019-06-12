@@ -32,19 +32,20 @@ app.get("/students", (req, res) => {
 
 app.get("/restaurants", (req, res) => {
   res.render("restaurants", {
-    restaurants: restaurants.restaurants
+    restaurants: restaurants.restaurants,
+    students: data.students
   });
 });
 
 app.post("/students", (req, res) => {
-  const { name } = req.body;
-  data.students.push(name);
+  const newStudent = req.body.studentName;
+  data.students.push(newStudent);
   res.sendStatus(201);
 });
 
 app.post("/restaurants", (req, res) => {
-  const { restaurantName } = req.body;
-  restaurants.restaurants.push(restaurantName);
+  const newRestaurant = req.body.restaurantName;
+  restaurants.restaurants.push(newRestaurant);
   res.sendStatus(201);
 });
 
