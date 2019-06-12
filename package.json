@@ -1,0 +1,20 @@
+{
+  "name": "node_webserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "forever -c \"nodemon --exitcrash -L\" express.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "forever": "^1.0.0",
+    "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0"
+  }
+}
